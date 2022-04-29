@@ -1,0 +1,116 @@
+
+.card {
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    height: 300px;
+    position: relative;
+    cursor: pointer
+}
+
+.product-image img {
+    position: absolute;
+    top: 30px;
+    width: 200px;
+    transition: all 0.5s
+}
+
+.delwish{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.card:hover .product-image img {
+    transform: rotate(10deg)
+}
+
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label:nth-child(1) span {
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    display: inline-block;
+    background-color: gray;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 2s
+}
+
+label:nth-child(2) span {
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #000;
+    display: inline-block;
+    color: #8f37aa;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 2s
+}
+
+label:nth-child(3) span {
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid pink;
+    background-color: pink;
+    display: inline-block;
+    color: #8f37aa;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 2s
+}
+
+label.radio input:checked+span::after {
+    content: '\f179';
+    font-family: 'fontawesome';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    font-size: 11px;
+    color: #fff
+}
+
+.button {
+    width: 200px;
+    height: 48px;
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 20px;
+    background-color: #126ef9;
+    color: #fff
+}
+
+.button i {
+    margin-top: 1px
+}
+
+@media (max-width:770px) {
+    .product-image img {
+        position: absolute;
+        top: 130px;
+        right: 10px;
+        width: 250px
+    }
+}
+
+@media (max-width:470px) {
+    .product-image img {
+        position: absolute;
+        top: 190px;
+        right: 10px;
+        width: 150px
+    }
+}
