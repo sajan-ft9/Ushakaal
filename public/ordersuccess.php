@@ -7,13 +7,13 @@ $customer_id = $_SESSION['customer_id'];
 $orders = new Orders();
 ?>
 <div class="container">
-<a href="orders.php" class="mb-4 mt-4 btn btn-info">Click To View Pending</a>
+<a href="orders.php" class="mb-2 mt-4 btn btn-info">Click To View Pending</a>
 </div>
 <?php
 if($orders->getSelectedSold($customer_id) > 0){
     $allorders = $orders->getSelectedSold($customer_id);
 ?>
-<div class="ordersss container" style="max-height:450px; overflow-y:scroll;">
+<div class="ordersss container mb-5" style="max-height:420px; overflow-y:scroll;">
 <table class="table table-dark table-hover table-striped">
     <thead style="text-align: center;">
         <tr>

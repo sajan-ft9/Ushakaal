@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if(isset($_SESSION['order_placed'])){
+  unset($_SESSION['order_placed']);
+}
+
+
 require_once "layout/header.php";
 $products = new Product();
 $product = $products->getProduct();

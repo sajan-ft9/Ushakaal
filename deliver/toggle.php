@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $seller_id = $PRODUCTS->sellerId($product_id)['cus_id'];
         echo $quantity = $req_order['quantity'];
         $ORDER->deliveryConfirm($order_id);
-        if(($ORDER->getToggle($order_id)['order_delivered']) ===1 && ($ORDER->getToggle($order_id)['payment_received']) === 1){
+        if(($ORDER->getToggle($order_id)['order_delivered']) === '1' && ($ORDER->getToggle($order_id)['payment_received']) === '1'){
             $ORDER->salesMade($order_id);
                 if($SALES->checkProduct($product_id) > 0){
                     $quantity1 = $SALES->checkProduct($product_id)['sales_qty'] + $quantity; 
@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $seller_id = $PRODUCTS->sellerId($product_id)['cus_id'];
         echo $quantity = $req_order['quantity'];
         $ORDER->paymentConfirm($order_id);
-        if(($ORDER->getToggle($order_id)['order_delivered']) === 1 && ($ORDER->getToggle($order_id)['payment_received']) === 1){
+        if(($ORDER->getToggle($order_id)['order_delivered']) === '1' && ($ORDER->getToggle($order_id)['payment_received']) === '1'){
             $ORDER->salesMade($order_id);
                 if($SALES->checkProduct($product_id) > 0){
                     $quantity1 = $SALES->checkProduct($product_id)['sales_qty'] + $quantity; 

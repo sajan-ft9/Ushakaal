@@ -40,9 +40,9 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
                                     <td>
                                         <?php
                                         
-                                            if($details['order_delivered'] === 1){
+                                            if($details['order_delivered'] === '1'){
                                                 echo "<h2>&#10004;</h2>";
-                                            }elseif($details['order_delivered'] === 0){
+                                            }elseif($details['order_delivered'] === '0'){
                                         ?>
                                                 <form action="toggle.php" method="post">
                                                     <input type="hidden" name="orderid" value="<?=$details['id']?>" required>
@@ -55,9 +55,9 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
                                     </td>  
                                     <td>
                                         <?php
-                                            if($details['payment_received'] === 1){
+                                            if($details['payment_received'] === '1'){
                                                 echo "<h2>&#10004;</h2>";
-                                            }elseif($details['payment_received'] === 0){
+                                            }elseif($details['payment_received'] === '0'){
                                         ?>
                                                 <form action="toggle.php" method="post">
                                                     <input type="hidden" name="orderid" value="<?=$details['id']?>" required>
