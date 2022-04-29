@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2022 at 04:29 PM
+-- Generation Time: Apr 29, 2022 at 06:47 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -87,8 +87,7 @@ CREATE TABLE `cart` (
 INSERT INTO `cart` (`id`, `product_id`, `customer_id`, `qty`) VALUES
 (78, 34, 14, 5),
 (79, 33, 14, 1),
-(97, 42, 17, 1),
-(98, 46, 17, 1);
+(102, 41, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -209,10 +208,18 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `customer_id`, `productid`, `quantity`, `payment_type`, `amount`, `order_date`, `order_address`, `order_delivered`, `payment_received`, `sold`, `bill_no`, `seller_id`) VALUES
-(33, 2, 40, 1, 'cash', '350.00', '2022-04-29 03:50:51', 'sdjks,Ktm,NPL,666666', 1, 1, 1, 'COD-2-1651196895', 1),
-(35, 2, 40, 1, 'cash', '350.00', '2022-02-27 07:17:00', 'Libali ,BKT,NPL,54564', 0, 0, 0, 'COD-2-1651202882', 1),
+(33, 2, 40, 1, 'cash', '350.00', '2021-04-29 03:50:51', 'sdjks,Ktm,NPL,666666', 1, 1, 1, 'COD-2-1651196895', 1),
+(35, 2, 40, 1, 'cash', '350.00', '2019-05-02 16:33:14', 'Libali ,BKT,NPL,54564', 1, 1, 1, 'COD-2-1651202882', 1),
 (36, 2, 40, 2, 'esewa', '700.00', '2022-03-29 12:36:43', 'sdjks,Ktm,BHR,666666', 1, 1, 1, 'ES-2-1651203171', 1),
-(37, 1, 40, 1, 'cash', '350.00', '2022-04-29 06:58:50', 'sdjks,Ktm,NPL,666666', 1, 1, 1, 'COD-1-1651215505', 1);
+(37, 1, 40, 1, 'cash', '350.00', '2022-04-29 06:58:50', 'sdjks,Ktm,NPL,666666', 1, 1, 1, 'COD-1-1651215505', 1),
+(38, 1, 46, 2, 'cash', '500.00', '2022-04-29 16:37:51', 'dekocha,bhaktapur,NPL,12', 1, 1, 1, 'COD-1-1651248238', 17),
+(39, 1, 42, 10, 'cash', '4500.00', '2022-03-29 16:03:58', 'dekocha,bhaktapur,NPL,12', 1, 1, 1, 'COD-1-1651248238', 1),
+(40, 1, 44, 1, 'esewa', '1000.00', '2022-04-09 16:42:45', 'lokanthali,bhaktapur,NPL,90', 1, 1, 1, 'ES-1-1651248471', 1),
+(41, 17, 42, 1, 'esewa', '450.00', '2022-04-29 16:37:14', 'sdjks,bhaktapur,BHR,666666', 1, 1, 1, 'ES-17-1651249274', 1),
+(42, 17, 43, 1, 'cash', '500.00', '2022-02-23 16:37:25', 'dekocha,bhaktapur,BGD,666666', 1, 1, 1, 'COD-17-1651249470', 1),
+(43, 17, 40, 1, 'cash', '350.00', '2022-04-29 16:37:20', 'dekocha,bhaktapur,BGD,666666', 1, 1, 1, 'COD-17-1651249470', 1),
+(44, 17, 44, 1, 'esewa', '1000.00', '2022-02-10 16:43:39', 'lokanthali,bhaktapur,NPL,666666', 1, 1, 1, 'ES-17-1651249697', 1),
+(45, 17, 43, 1, 'esewa', '500.00', '2022-03-01 16:32:34', 'lokanthali,bhaktapur,NPL,666666', 1, 1, 1, 'ES-17-1651249697', 1);
 
 -- --------------------------------------------------------
 
@@ -238,12 +245,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`pr_id`, `cus_id`, `pr_name`, `pr_desc`, `pr_img`, `pr_price`, `pr_qty`, `cat_id`, `pr_brand`, `stock`) VALUES
-(40, 1, 'Gundruk', 'Gundruk of Mustard Spinach', '626b43494d43b0.71569828.jpg', '350.00', 3, 29, 'Gundruk', 10),
+(40, 1, 'Gundruk', 'Gundruk of Mustard Spinach', '626b43494d43b0.71569828.jpg', '350.00', 2, 29, 'Gundruk', 10),
 (41, 1, 'Lakhbatti', 'Lakh per package', '626b7474233692.59368196.png', '11111.00', 10, 30, 'Jay Shree Ram', 10),
-(42, 1, 'Scented Candles', 'It is rose scented candles', '626bd953a3a5d7.55236209.jpeg', '450.00', 20, 30, 'Kalon Candles', 20),
-(43, 1, 'Crotchet Vest', 'It is customised crotchet vest.', '626bdb4a6ae1f0.46454873.jpg', '500.00', 10, 32, 'Crotchet Vest', 10),
-(44, 1, 'Crotchet Sweater', 'It is customised handmade sweater.', '626bdd55b5cd95.23603545.jpg', '1000.00', 15, 32, 'Crotchet', 15),
-(46, 17, 'Crotchet Bags', 'Handmade crotchet bags', '626be3284e0b54.01388854.jpg', '250.00', 5, 33, 'Crotchet bags', 5);
+(42, 1, 'Scented Candles', 'It is rose scented candles', '626bd953a3a5d7.55236209.jpeg', '450.00', 9, 30, 'Kalon Candles', 20),
+(43, 1, 'Crotchet Vest', 'It is customised crotchet vest.', '626bdb4a6ae1f0.46454873.jpg', '500.00', 8, 32, 'Crotchet Vest', 10),
+(44, 1, 'Crotchet Sweater', 'It is customised handmade sweater.', '626bdd55b5cd95.23603545.jpg', '1000.00', 13, 32, 'Crotchet', 15),
+(46, 17, 'Crotchet Bags', 'Handmade crotchet bags', '626be3284e0b54.01388854.jpg', '250.00', 3, 33, 'Crotchet bags', 5);
 
 -- --------------------------------------------------------
 
@@ -289,7 +296,11 @@ CREATE TABLE `sales` (
 --
 
 INSERT INTO `sales` (`id`, `product_id`, `sales_qty`, `cus_id`) VALUES
-(12, 40, 4, 1);
+(12, 40, 6, 1),
+(13, 43, 2, 1),
+(14, 44, 2, 1),
+(15, 42, 11, 1),
+(16, 46, 2, 17);
 
 -- --------------------------------------------------------
 
@@ -420,7 +431,7 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -450,7 +461,7 @@ ALTER TABLE `notice`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -468,7 +479,7 @@ ALTER TABLE `rating`
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `wishes`
